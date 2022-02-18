@@ -71,9 +71,9 @@ class CarController extends Controller
      */
     public function edit($id)
     {
-        //
+        $car = Car::findOrFail($id);
+        return view('cars.edit', compact('car'));
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -83,7 +83,11 @@ class CarController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $form_data = $request->all();
+        $car_to_update = Car::findOrFail($id);
+        $car_to_update->update($form_data);
+
+        return redirect()->route('cars.show', [$car_to_update->id]);
     }
 
     /**
