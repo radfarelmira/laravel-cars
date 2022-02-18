@@ -8,6 +8,23 @@
     <title>Document</title>
 </head>
 <body>
+    <header>
+        {{-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Navbar</a>
+            </div>
+          </nav> --}}
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link" href="{{ route('cars.index') }}">Lista macchine</a>
+                  <a class="nav-link" href="{{ route('cars.create') }}">Inserisci macchina</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
     <main>
         @yield('main_content')
     </main>
