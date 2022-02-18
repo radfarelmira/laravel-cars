@@ -37,7 +37,10 @@ class CarController extends Controller
      */
     public function store(Request $request)
     {
+        
         $form_data = $request->all();
+
+        $request->validate($this->getValidationRules());
 
 
         // salviamo le informazioni nel database
@@ -83,8 +86,14 @@ class CarController extends Controller
      */
     public function update(Request $request, $id)
     {
+        
+
         $form_data = $request->all();
+
+        $request->validate($this->getValidationRules());
+
         $car_to_update = Car::findOrFail($id);
+        
         $car_to_update->update($form_data);
 
         return redirect()->route('cars.show', [$car_to_update->id]);
@@ -102,5 +111,17 @@ class CarController extends Controller
         $car_to_delete->delete();
 
         return redirect()->route('cars.index');
+    }
+
+    
+    // all validation here
+    protected function getValidationRules() {
+        return [
+            'marca' => 'required',
+            'modello' => 'required',
+            'cilindrata' => 'required',
+            'porte' => 'required',
+            'img' => 'required'
+        ];
     }
 }
