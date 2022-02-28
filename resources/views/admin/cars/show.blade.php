@@ -9,9 +9,9 @@
           <div class="cyan">Cilindrata {{ $car->cilindrata }}</div>
           <div class="cyan">Porte: {{ $car->porte }}</div>
           <p class="card-text">{{ $car->description }}</p>
-          <div class="cyan"><a class="btn btn-primary" href="{{ route('cars.edit', ['car' => $car->id]) }}">Modifica</a></div>
+          <div class="cyan"><a class="btn btn-primary" href="{{ route('admin.cars.edit', ['car' => $car->id]) }}">Modifica</a></div>
           <div class="cyan">
-            <form class="cyan" action="{{ route('cars.destroy', ['car' => $car->id]) }}" method="post">
+            <form class="cyan" action="{{ route('admin.cars.destroy', ['car' => $car->id]) }}" method="post">
               @csrf
               @method('DELETE')
               <button class="btn btn-danger" onclick="return confirm('Sei sicuro di voler cancellare?')">Cancella</button>

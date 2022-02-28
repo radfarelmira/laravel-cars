@@ -5,7 +5,7 @@
     @foreach ($cars as $car)
         <div>
             <h2>
-                <a href="{{ route('cars.show', ['car' => $car->id]) }}">{{ $car->marca }} {{ $car->modello }}</a>
+                <a href="{{ route('admin.cars.show', ['car' => $car->id]) }}">{{ $car->marca }} {{ $car->modello }}</a>
             </h2>
         </div>
     @endforeach

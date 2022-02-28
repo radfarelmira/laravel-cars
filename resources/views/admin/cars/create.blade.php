@@ -4,7 +4,7 @@
     <div class="container">
         <h1>Inserisci Macchina</h1>
 
-        <form action="{{ route('cars.store') }}" method="post">
+        <form action="{{ route('admin.cars.store') }}" method="post">
             @csrf
             @method('POST')
 
