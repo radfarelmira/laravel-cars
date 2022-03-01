@@ -10,7 +10,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
 
 // RESET
-* {
+body {
     background-color: antiquewhite;
     font-family: 'Open Sans', sans-serif;
 }
@@ -49,6 +49,40 @@ div.card {
     color:white;
 }
 
-.cyan {
+nav {
     background-color: darkcyan;
+    color: white;
+}
+
+.navbar-nav > a {
+    color: white;
+}
+
+.navbar-nav > a:hover {
+    color: rgb(4, 82, 82);
+}
+
+#navbarDropdown {
+    color: white;
+}
+
+#navbarDropdown:hover {
+    color: rgb(4, 82, 82);
+}
+
+a.nav-link {
+    color: white;
+}
+
+a.nav-link:hover {
+    color: rgb(4, 82, 82);
+}
+
+
+h1 {
+    color: white;
+}
+
+label {
+    color: darkcyan;
 }
