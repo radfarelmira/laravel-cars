@@ -10963,7 +10963,7 @@ a.text-dark:focus {
   }
 }
 
-* {
+body {
   background-color: antiquewhite;
   font-family: "Open Sans", sans-serif;
 }
@@ -11002,7 +11002,40 @@ div.card {
   color: white;
 }
 
-.cyan {
+nav {
   background-color: darkcyan;
+  color: white;
+}
+
+.navbar-nav > a {
+  color: white;
+}
+
+.navbar-nav > a:hover {
+  color: #045252;
+}
+
+#navbarDropdown {
+  color: white;
+}
+
+#navbarDropdown:hover {
+  color: #045252;
+}
+
+a.nav-link {
+  color: white;
+}
+
+a.nav-link:hover {
+  color: #045252;
+}
+
+h1 {
+  color: white;
+}
+
+label {
+  color: darkcyan;
 }
 

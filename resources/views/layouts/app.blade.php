@@ -15,7 +15,7 @@
               <a class="navbar-brand" href="#">Navbar</a>
             </div>
           </nav> --}}
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
