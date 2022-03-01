@@ -29,6 +29,23 @@
                     <input modello="text" class="form-control" id="modello" name="modello" value="{{ old('modello') ? old('modello') : $car->modello }}">
                 </div>
 
+                
+
+                    
+                {{-- categories --}}
+                <div class="mb-2">categoria</div>
+                    <select class="form-select" id="category_id" name="category_id" >
+
+                        <option value="">Nessuna</option>
+
+                        @foreach ($categories as $category)
+                            <option value="{{$category->id}}" {{old('category_id') == $category->id ? 'selected' : ''}}>{{$category->name}}</option>
+                        @endforeach
+
+                    </select>
+                    
+                </div>
+
                 <div class="mb-3">
                     <label for="cilindrata" class="form-label">Cilindrata</label>
                     <input type="text" class="form-control" id="cilindrata" name="cilindrata" value="{{ old('cilindrata') ? old('cilindrata') : $car->cilindrata }}">

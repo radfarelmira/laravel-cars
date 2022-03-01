@@ -5,6 +5,14 @@
         <img src="{{ $car->img }}" class="card-img-top" alt="{{ $car->marca }}">
         <div class="card-body">
           <h5 class="card-title cyan">{{ $car->marca }}</h5>
+
+          {{-- categories --}}
+          <div>
+              <span>
+                categorie: {{$car->category ? $car->category->name : 'nessuno'}}
+              </span>
+          </div>
+
           <div class="cyan">Modello: {{ $car->modello }}€</div>
           <div class="cyan">Cilindrata {{ $car->cilindrata }}</div>
           <div class="cyan">Porte: {{ $car->porte }}</div>

@@ -13,4 +13,10 @@ class Car extends Model
         'porte',
         'img'
     ];
+    
+    public function categories(){
+        return $this->belongsTo('App\Category');
+    }
+    
+
 }
