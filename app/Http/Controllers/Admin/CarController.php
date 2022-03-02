@@ -105,17 +105,11 @@ class CarController extends Controller
         
 
         $form_data = $request->all();
-        dd($form_data);
         $request->validate($this->getValidationRules());
 
         $car_to_update = Car::findOrFail($id);
         
         $car_to_update->update($form_data);
-
-
-            $car_to_update->categories()->sync($form_data['category_id']);
-
-
 
         return redirect()->route('admin.cars.show', [$car_to_update->id]);
     }

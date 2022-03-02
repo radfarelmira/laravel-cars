@@ -11,7 +11,8 @@ class Car extends Model
         'modello',
         'cilindrata',
         'porte',
-        'img'
+        'img',
+        'category_id'
     ];
     
     public function categories(){
