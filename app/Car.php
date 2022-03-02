@@ -11,6 +11,14 @@ class Car extends Model
         'modello',
         'cilindrata',
         'porte',
-        'img'
+        'img',
+        'category_id'
     ];
+    
+    public function category()
+    {
+        return $this->belongsTo('App\Category');
+    }
+    
+
 }

@@ -11,7 +11,7 @@
 
 // RESET
 body {
-    background-color: antiquewhite;
+    background-color: rgb(255, 255, 255);
     font-family: 'Open Sans', sans-serif;
 }
 a {
@@ -41,6 +41,7 @@ div.card {
     border-radius: 10px;
     border: solid 3px darkgray;
     background-color: darkcyan;
+    color: white;
     padding: 10px;
 }
 
@@ -84,5 +85,5 @@ h1 {
 }
 
 label {
-    color: darkcyan;
+    color: rgb(255, 255, 255);
 }

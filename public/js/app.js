@@ -49931,8 +49931,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\mamp\htdocs\laravel-cars-test\laravel-cars\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\mamp\htdocs\laravel-cars-test\laravel-cars\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/lorenzocastelli/BOOLEAN/reposotory/PHP-LARAVEL/laravel-cars/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/lorenzocastelli/BOOLEAN/reposotory/PHP-LARAVEL/laravel-cars/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

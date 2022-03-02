@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Car;
+use App\Category;
 use App\Http\Controllers\Controller;
 
 class CarController extends Controller
@@ -63,8 +64,15 @@ class CarController extends Controller
     public function show($id)
     {
         $car = Car::findOrFail($id);
-
-        return view('admin.cars.show', compact('car'));
+        // add category
+        $categories = Category::all();
+       
+        $data = [
+            'car' => $car,
+            'categories' => $categories
+        ];
+       
+        return view('admin.cars.show', $data);
     }
 
     /**
@@ -76,7 +84,14 @@ class CarController extends Controller
     public function edit($id)
     {
         $car = Car::findOrFail($id);
-        return view('admin.cars.edit', compact('car'));
+        $categories = Category::all();
+
+        $data = [
+            'car' => $car,
+            'categories' => $categories
+        ];
+
+        return view('admin.cars.edit', $data);
     }
     /**
      * Update the specified resource in storage.
@@ -90,7 +105,6 @@ class CarController extends Controller
         
 
         $form_data = $request->all();
-
         $request->validate($this->getValidationRules());
 
         $car_to_update = Car::findOrFail($id);
@@ -122,7 +136,8 @@ class CarController extends Controller
             'modello' => 'required',
             'cilindrata' => 'required',
             'porte' => 'required',
-            'img' => 'required'
+            'img' => 'required',
+            'category_id' => 'exists:categories,id|nullable'
         ];
     }
 }

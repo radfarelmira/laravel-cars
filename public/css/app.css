@@ -10964,7 +10964,7 @@ a.text-dark:focus {
 }
 
 body {
-  background-color: antiquewhite;
+  background-color: white;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -10994,6 +10994,7 @@ div.card {
   border-radius: 10px;
   border: solid 3px darkgray;
   background-color: darkcyan;
+  color: white;
   padding: 10px;
 }
 
@@ -11036,6 +11037,6 @@ h1 {
 }
 
 label {
-  color: darkcyan;
+  color: white;
 }
 
