@@ -66,12 +66,12 @@ class CarController extends Controller
         $car = Car::findOrFail($id);
         // add category
         $categories = Category::all();
-        // dd($category);
+       
         $data = [
             'car' => $car,
             'categories' => $categories
         ];
-
+       
         return view('admin.cars.show', $data);
     }
 

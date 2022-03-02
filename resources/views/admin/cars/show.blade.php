@@ -11,7 +11,7 @@
         <h5 class="card-title cyan">{{ $car->marca }}</h5>
 
         {{-- categories --}}
-        <div> categorie: {{$car->category ? $car->category->name : 'nessuno'}} </div>
+        <div> categorie: {{ $car->category ? $car->category->name : 'nessuno'}} </div>
 
         {{-- modello --}}
         <div class="cyan">Modello: {{ $car->modello }}€</div>
